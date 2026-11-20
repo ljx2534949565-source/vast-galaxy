@@ -1,0 +1,23 @@
+# 依赖与构建产物
+node_modules/
+dist/
+.DS_Store
+*.log
+
+# 安卓构建产物
+android/.gradle/
+android/app/build/
+android/build/
+android/app/src/main/assets/public/
+
+# 本机 SDK 路径（每台机器不同，绝不提交）
+android/local.properties
+
+# 签名私钥（绝不提交）
+*.keystore
+*.jks
+android/keystore/
+
+# 编辑器 / 系统
+.idea/
+.vscode/

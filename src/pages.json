@@ -1,0 +1,62 @@
+{
+  "pages": [
+    {
+      "path": "pages/index/index",
+      "style": {
+        "navigationBarTitleText": "Vast Galaxy",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/settings/settings",
+      "style": {
+        "navigationBarTitleText": "设置",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/study/study",
+      "style": {
+        "navigationBarTitleText": "学习",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/words/words",
+      "style": {
+        "navigationBarTitleText": "看单词",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/quiz/quiz",
+      "style": {
+        "navigationBarTitleText": "快速测验",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/mistakes/mistakes",
+      "style": {
+        "navigationBarTitleText": "错题本",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/ai-guide/ai-guide",
+      "style": {
+        "navigationBarTitleText": "本地模型部署",
+        "navigationStyle": "custom"
+      }
+    }
+  ],
+  "globalStyle": {
+    "navigationBarBackgroundColor": "#0E1520",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#0E1520",
+    "backgroundTextStyle": "dark",
+    "enablePullDownRefresh": false,
+    "rpxCalcMaxDeviceWidth": 640,
+    "rpxCalcBaseDeviceWidth": 480
+  }
+}

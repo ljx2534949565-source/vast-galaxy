@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 系统深色时把启动底色压暗，避免从纯白闪一下再进深色页面 -->
+    <color name="colorPrimary">#9A9DF7</color>
+    <color name="colorPrimaryDark">#0E1520</color>
+    <color name="colorAccent">#9A9DF7</color>
+    <color name="splashBackground">#0E1520</color>
+</resources>
