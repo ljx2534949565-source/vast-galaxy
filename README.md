@@ -2,7 +2,7 @@
 
 一款尊重隐私、支持本地AI的考研单词记忆App
 
-![版本](https://img.shields.io/badge/version-5.6.3-blue)
+![版本](https://img.shields.io/badge/version-5.6.4-blue)
 ![许可证](https://img.shields.io/badge/License-MIT-yellow.svg)
 ![构建状态](https://github.com/ljx2534949565-source/vast-galaxy/actions/workflows/build-apk.yml/badge.svg)
 ![平台](https://img.shields.io/badge/Platform-Android-green)
@@ -10,7 +10,7 @@
 一个面向考研的单词记忆 App。单词、学习进度、错题、壁纸、歌单默认只存在手机本机；AI 助记和音乐播放是可选功能。
 
 - 技术栈：Vue 3 + uni-app（H5）+ Capacitor（安卓壳）
-- 版本：5.6.3（versionCode 50603）
+- 版本：5.6.4（versionCode 50604）
 - 包名：`com.kaoyan.memory`
 - 最低系统：Android 9（API 28）
 - 许可证：[MIT](./LICENSE)
@@ -72,5 +72,6 @@ android/            Capacitor 安卓壳
 
 ## 📝 更新日志
 
+- v5.6.4：重做应用图标——原来的星空照片在启动器里几乎全黑，现换成亮紫星河背景 + 金色星球，小尺寸下也能看清。
 - v5.6.3：修复四处界面问题——深色壁纸 / 深色主题下 AI 页顶栏仍显示白色渐变遮罩；「今日复习」「错题本专练」图标不随主题色变化；主题色卡片选中角标被圆角裁切。同时在设置页新增「觉得左右滑动卡顿？」提示与高刷新率开启引导。
 - v5.6.2 Initial release：首次开源发布

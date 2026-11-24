@@ -1,6 +1,6 @@
 {
   "name": "kaoyan-memory",
-  "version": "5.6.3",
+  "version": "5.6.4",
   "private": true,
   "type": "module",
   "description": "全离线考研词汇记忆应用",

@@ -2,8 +2,8 @@
   "name": "Vast Galaxy",
   "appid": "__UNI__KYMEMORY01",
   "description": "考研词汇记忆应用（本地优先，云端可选）",
-  "versionName": "5.6.3",
-  "versionCode": "50603",
+  "versionName": "5.6.4",
+  "versionCode": "50604",
   "transformPx": false,
   "uniStatistics": { "enable": false },
   "app-plus": {
