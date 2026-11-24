@@ -375,8 +375,11 @@ function confirmImport() {
 .entry { width: 100%; min-height: 128rpx; display: flex; align-items: center; padding: 22rpx 26rpx; text-align: left; transition: transform 120ms ease; }
 .entry:active { transform: scale(.98); }
 .entry-icon { width: 76rpx; height: 76rpx; display: flex; align-items: center; justify-content: center; flex: 0 0 auto; border-radius: 22rpx; color: var(--accent-contrast); background: var(--accent-gradient); box-shadow: 6rpx 8rpx 16rpx var(--glow); }
-.entry-icon.review { background: linear-gradient(145deg, #568ec7, #66b7c1); }
-.entry-icon.mistakes { background: linear-gradient(145deg, #c25f7a, #db8792); }
+/* 五个入口图标全部吃主题色：主色 / 第二色 / 第三色两两组合，
+   既跟着主题一起换，又能互相区分。之前这里写死了蓝和粉，
+   换主题后图标不变、只有外发光跟着变，看着像没生效。 */
+.entry-icon.review { background: linear-gradient(145deg, var(--accent-3), var(--accent-2)); }
+.entry-icon.mistakes { background: linear-gradient(145deg, var(--accent-2), var(--accent)); }
 .entry-copy { flex: 1; min-width: 0; margin-left: 22rpx; }
 .entry-title { font-size: 30rpx; font-weight: 720; }
 .entry-description { margin-top: 8rpx; color: var(--text-secondary); font-size: 22rpx; }

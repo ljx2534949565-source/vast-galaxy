@@ -475,6 +475,25 @@
       </view>
       </view>
 
+      <view class="setting-block">
+      <view class="section-label">流畅度</view>
+      <view class="card glass-card fade-up">
+        <view class="card-head">
+          <view class="card-title-wrap">
+            <view class="card-title">觉得左右滑动卡顿？</view>
+            <view class="card-copy">很多手机默认把普通应用锁在 60Hz，没跑满屏幕的高刷新率。到系统设置里把本应用加进「使用高刷新率的应用」白名单，滑动会顺很多。</view>
+          </view>
+        </view>
+        <image
+          class="refresh-tip-shot"
+          src="/static/high-refresh-tip.jpg"
+          mode="widthFix"
+          aria-label="系统设置中的使用高刷新率的应用页面，开启 Vast Galaxy 开关"
+        />
+        <view class="hint">路径通常在：设置 → 显示与亮度 → 屏幕刷新率 / 使用高刷新率的应用。不同品牌叫法略有差异，搜「高刷新率」一般就能找到。</view>
+      </view>
+      </view>
+
       <view class="footnote">{{ APP_VERSION }} · 数据留在本机 · 不收集任何信息</view>
     </view>
 
@@ -890,7 +909,11 @@ function confirmDialog() {
 .accent-option { position: relative; display: flex; min-width: 0; margin: 0; padding: 10rpx 10rpx 13rpx; flex-direction: column; align-items: center; gap: 10rpx; border: 1rpx solid var(--line); border-radius: 18rpx; background: var(--surface-soft); color: var(--text-secondary); line-height: 1.2; transition: transform 140ms ease, border-color 180ms ease, box-shadow 180ms ease, background 180ms ease; }
 .accent-option:active { transform: scale(.96); }
 .accent-option.active { border-color: var(--accent-ink); background: var(--accent-gradient-soft); color: var(--text); box-shadow: 0 0 0 3rpx var(--glow); }
-.accent-option.active::after { content: ''; position: absolute; right: 8rpx; top: 8rpx; width: 11rpx; height: 11rpx; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3rpx rgba(255, 255, 255, .72); }
+/* 选中角标。必须是「left:auto + transform:none」：
+   uni-app 的 button 自带 ::after（left:0 / 200% 宽高 / scale(.5)），
+   只写 right/top 的话 left:0 仍生效，圆点会被拖到左上角并缩掉一半，
+   正好卡在卡片圆角上被裁出一道缺口（v5.6.3 修）。 */
+.accent-option.active::after { content: ''; position: absolute; left: auto; right: 10rpx; top: 10rpx; width: 11rpx; height: 11rpx; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3rpx rgba(255, 255, 255, .72); transform: none; transform-origin: center; }
 .accent-swatch { position: relative; width: 100%; height: 48rpx; overflow: hidden; border-radius: 12rpx; box-shadow: inset 0 1rpx 0 rgba(255, 255, 255, .48), 0 5rpx 12rpx var(--shadow-dark); }
 .accent-swatch-glint { position: absolute; inset: 0; background: linear-gradient(120deg, rgba(255, 255, 255, .38), transparent 44%, rgba(255, 255, 255, .10)); }
 .accent-option-label { font-size: 21rpx; font-weight: 700; white-space: nowrap; }
@@ -940,6 +963,8 @@ function confirmDialog() {
 .sound-option-tag { font-size: 21rpx; color: var(--text-secondary); margin-top: 6rpx; }
 .sound-option.chosen .sound-option-tag { color: var(--accent-ink); }
 .hint { margin-top: 18rpx; color: var(--text-secondary); font-size: 21rpx; line-height: 1.6; }
+/* 高刷新率示意截图：整宽、圆角、细边，跟卡片内其它内容对齐 */
+.refresh-tip-shot { display: block; width: 100%; margin-top: 20rpx; border-radius: 16rpx; border: 1rpx solid var(--line); }
 /* 玻璃质感总开关：状态标签 + 开关并排 */
 .glass-head-actions { display: flex; flex: 0 0 auto; align-items: center; gap: 16rpx; }
 /* 总开关关掉后，下面的滑块 / 三档 / 两种玻璃整片置灰并禁止点击 */

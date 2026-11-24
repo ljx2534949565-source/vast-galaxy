@@ -8,8 +8,8 @@ android {
         applicationId 'com.kaoyan.memory'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 50602
-        versionName '5.6.2'
+        versionCode 50603
+        versionName '5.6.3'
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
 
         // 真机是 arm64-v8a；x86_64 只给模拟器用，打进来白白多 25MB。

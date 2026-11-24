@@ -170,6 +170,10 @@ html.has-photo.photo-dark {
   --sheet-wash: rgba(12, 20, 31, 0.48);
   --sheet-line: rgba(200, 222, 248, 0.18);
   --glass-refract: rgba(126, 162, 205, 0.20);
+  /* 深色壁纸下同样是浅字，顶栏那层渐隐背板必须一起转深。
+     否则浅色主题 + 深色壁纸时，AI 页顶部会顶着一条白色渐变（v5.6.3 修）。 */
+  --head-glow: rgba(0, 0, 0, 0.55);
+  --head-veil: linear-gradient(to bottom, rgba(12, 20, 32, 0.94) 0%, rgba(12, 20, 32, 0.92) 45%, rgba(12, 20, 32, 0.72) 62%, rgba(12, 20, 32, 0.3) 82%, rgba(12, 20, 32, 0) 100%);
   /* 深色壁纸 + 浅色主题：弹窗与底栏别再拿白色实底，否则浅字全糊在白底上。
      JS 的 applyBackground() 会按玻璃浓度再覆盖一次，这里只做首帧兜底 */
   --dialog-fill: rgba(20, 32, 48, .86);
